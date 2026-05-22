@@ -1,0 +1,45 @@
+# DSMP-ESS | Plugin Overview
+
+**DSMP-ESS** is a central utility and essentials plugin tailored for the **DeepslateSMP** Minecraft server. It focuses on integrating multiple APIs to provide a seamless, high-performance experience with modern visual styling.
+
+---
+
+## 🚀 Key Features
+
+### 1. Dynamic Tablist & Visuals
+*   **Modern Branding:** Displays a customizable server name using **MiniMessage gradients** and bold styling in the Tablist header.
+*   **Real-time Performance:** Shows live **TPS (Ticks Per Second)** from the Spark API in the footer.
+*   **Player Identity:** Synchronizes player names in the list with **LuckPerms prefixes** and custom metadata colors. It also displays a special "Economy Team" tag.
+*   **Activity Monitoring:** Sends automated Action Bar updates using the **Plan API** to show current player activity groups.
+
+### 2. Intelligent Systems
+*   **Adaptive Join Messages:** Greets players with a welcome message that conditionally displays their protocol version (ViaVersion) and current server population. It hides empty data to maintain a clean UI.
+*   **Automatic Diagnostic Audits:** Every time a player joins, the plugin verifies that all required **PlaceholderAPI (PAPI) extensions** (LuckPerms, ViaVersion, etc.) are installed and warns administrators if anything is missing.
+
+### 3. Integrated Command Suite
+*   `/ping`: Instant latency check for players.
+*   `/tps`: Detailed server performance metrics across various time intervals.
+*   `/dc` / `/discord`: Interactive, clickable chat links with hover effects to join the community.
+*   `/about`: Displays current plugin version and developer credits for **QuatschStudio Games**.
+
+### 4. Custom Chat Formatting
+*   Utilizes a modern **AsyncChatEvent renderer** to inject group-specific colors and prefixes directly into the chat, ensuring a consistent aesthetic across the server.
+
+---
+
+## 🛠 Technical Specifications
+
+| Feature | Description |
+| :--- | :--- |
+| **API Integration** | Deeply hooked into **LuckPerms**, **PlaceholderAPI**, **ViaVersion**, **Spark**, and **Plan**. |
+| **Styling Engine** | Uses **Adventure MiniMessage** for advanced formatting (Gradients, Hovers, Clicks). |
+| **Threading** | Optimized for **Folia/Paper** using the `GlobalRegionScheduler` for thread-safe periodic tasks. |
+| **Config Driven** | Server names, colors, and links are fully customizable via `config.yml`. |
+
+---
+
+## 📋 Configuration Options
+The plugin's behavior is controlled through a dedicated configuration file:
+*   `server-name`: Define the identity of your server.
+*   `server-color`: Define the primary brand color or gradient.
+*   `discord-link`: Manage the community invitation URL.

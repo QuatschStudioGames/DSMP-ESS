@@ -1,0 +1,23 @@
+name: DSMP-ESS
+description: ${project.description}
+website: ${project.url}
+api-version: "1.20"
+folia-supported: true
+author: QuatschStudio Games (FeGmbH et al.)
+version: ${project.version}
+main: de.qstudios.dsmp.WelcomePlugin
+depend: ["PlaceholderAPI", "LuckPerms"]
+commands:
+  tps:
+    description: Ein TPS-Command (5s, 1m, 5m, 15m)
+    usage: /tps
+    permission: qstudios.tps
+  ping:
+    description: Zeigt deinen Ping
+    usage: /ping
+  dc:
+    description: Link zum Discord
+    usage: /dc
+  discord:
+    description: Link zum Discord
+    usage: /discord
